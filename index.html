@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苏东坡 - 一蓑烟雨任平生</title>
+    <style>
+        /* 全局设置：引入古风字体，设置背景 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Kaiti", "STKaiti", "楷体", "Georgia", serif; /* 优先使用楷体 */
+            background-color: #f4f1e8; /* 米宣纸色 */
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+            background-size: 20px 20px; /* 模拟纸纹网格 */
+            color: #2b2b2b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* 主容器：模拟画卷或扇面 */
+        .container {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #dcdcdc;
+            /* 顶部和底部的装饰线 */
+            border-top: 4px solid #5d4037;
+            border-bottom: 4px solid #5d4037;
+        }
+
+        /* 装饰性印章效果 */
+        .container::before {
+            content: "东坡";
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #b22222;
+            color: #b22222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            opacity: 0.8;
+            transform: rotate(-5deg);
+            font-family: "LiSu", "隶书", serif;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+            font-style: italic;
+            border-bottom: 1px dashed #aaa;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .content {
+            font-size: 1.15em;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 30px;
+            text-indent: 2em;
+        }
+
+        /* 诗词部分特殊样式 */
+        .poem-box {
+            background-color: rgba(93, 64, 55, 0.05); /* 淡褐色背景 */
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+            border-left: 3px solid #b22222; /* 左侧红边装饰 */
+            text-align: left;
+        }
+
+        .poem-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #8b0000;
+            text-align: center;
+        }
+
+        .poem-content {
+            font-size: 1.1em;
+            line-height: 2;
+            white-space: pre-line; /* 保留换行 */
+            color: #333;
+        }
+
+        .highlight {
+            color: #b22222;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 480px) {
+            h1 { font-size: 2em; }
+            .container { padding: 20px; width: 85%; }
+            .content { text-align: left; text-indent: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>苏东坡</h1>
+        <div class="subtitle">北宋大文豪 · 生活家 · 乐天派</div>
+
+        <div class="content">
+            <p>
+                苏轼，字子瞻，号东坡居士。他一生跌宕起伏，却始终以豁达之心面对风雨。他是千古第一才子，也是热爱美食、热爱生活的凡人。无论身处何地，他都能随遇而安，将苦难酿成诗篇。
+            </p>
+        </div>
+
+        <div class="poem-box">
+            <div class="poem-title">定风波 · 莫听穿林打叶声</div>
+            <div class="poem-content">
+莫听穿林打叶声，何妨吟啸且徐行。
+竹杖芒鞋轻胜马，谁怕？
+<span class="highlight">一蓑烟雨任平生</span>。
+
+料峭春风吹酒醒，微冷，
+山头斜照却相迎。
+回首向来萧瑟处，归去，
+也无风雨也无晴。
+            </div>
+        </div>
+
+        <footer>
+            “人生如逆旅，我亦是行人。”
+        </footer>
+    </div>
+
+</body>
+</html>
