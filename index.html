@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>苏东坡 - 一蓑烟雨任平生</title>
+    <title>蘇東坡 - 一蓑煙雨任平生</title>
     <style>
-        /* 全局设置：引入古风字体，设置背景 */
+        /* 全局設置：引入適合繁體字的書法字體 */
         body {
             margin: 0;
             padding: 0;
-            font-family: "Kaiti", "STKaiti", "楷体", "Georgia", serif; /* 优先使用楷体 */
-            background-color: #f4f1e8; /* 米宣纸色 */
+            /* 優先使用標楷體 (Windows/Mac 常見)，其次是微軟正黑體，最後是通用襯線體 */
+            font-family: "BiauKai", "DFKai-SB", "STKaiti", "Microsoft JhengHei", "Georgia", serif;
+            background-color: #f4f1e8; /* 米宣紙色 */
             background-image: 
                 linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
-            background-size: 20px 20px; /* 模拟纸纹网格 */
+            background-size: 20px 20px; /* 模擬紙紋網格 */
             color: #2b2b2b;
             display: flex;
             justify-content: center;
@@ -23,25 +24,25 @@
             overflow-x: hidden;
         }
 
-        /* 主容器：模拟画卷或扇面 */
+        /* 主容器：模擬畫卷或扇面 */
         .container {
             position: relative;
             width: 90%;
             max-width: 600px;
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.9);
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             border-radius: 8px;
             text-align: center;
             border: 1px solid #dcdcdc;
-            /* 顶部和底部的装饰线 */
+            /* 頂部和底部的裝飾線 */
             border-top: 4px solid #5d4037;
             border-bottom: 4px solid #5d4037;
         }
 
-        /* 装饰性印章效果 */
+        /* 裝飾性印章效果 */
         .container::before {
-            content: "东坡";
+            content: "東坡";
             position: absolute;
             top: 20px;
             right: 20px;
@@ -57,7 +58,7 @@
             border-radius: 4px;
             opacity: 0.8;
             transform: rotate(-5deg);
-            font-family: "LiSu", "隶书", serif;
+            font-family: "LiSu", "DFXingShu", "STXingkai", serif; /* 隸書或行楷 */
         }
 
         h1 {
@@ -86,13 +87,13 @@
             text-indent: 2em;
         }
 
-        /* 诗词部分特殊样式 */
+        /* 詩詞部分特殊樣式 */
         .poem-box {
             background-color: rgba(93, 64, 55, 0.05); /* 淡褐色背景 */
             padding: 20px;
             border-radius: 4px;
             margin: 20px 0;
-            border-left: 3px solid #b22222; /* 左侧红边装饰 */
+            border-left: 3px solid #b22222; /* 左側紅邊裝飾 */
             text-align: left;
         }
 
@@ -107,7 +108,7 @@
         .poem-content {
             font-size: 1.1em;
             line-height: 2;
-            white-space: pre-line; /* 保留换行 */
+            white-space: pre-line; /* 保留換行 */
             color: #333;
         }
 
@@ -122,7 +123,7 @@
             color: #777;
         }
 
-        /* 响应式调整 */
+        /* 響應式調整 */
         @media (max-width: 480px) {
             h1 { font-size: 2em; }
             .container { padding: 20px; width: 85%; }
@@ -133,31 +134,31 @@
 <body>
 
     <div class="container">
-        <h1>苏东坡</h1>
-        <div class="subtitle">北宋大文豪 · 生活家 · 乐天派</div>
+        <h1>蘇東坡</h1>
+        <div class="subtitle">北宋大文豪 · 生活家 · 樂天派</div>
 
         <div class="content">
             <p>
-                苏轼，字子瞻，号东坡居士。他一生跌宕起伏，却始终以豁达之心面对风雨。他是千古第一才子，也是热爱美食、热爱生活的凡人。无论身处何地，他都能随遇而安，将苦难酿成诗篇。
+                蘇軾，字子瞻，號東坡居士。他一生跌宕起伏，卻始終以豁達之心面對風雨。他是千古第一才子，也是熱愛美食、熱愛生活的凡人。無論身處何地，他都能隨遇而安，將苦難釀成詩篇。
             </p>
         </div>
 
         <div class="poem-box">
-            <div class="poem-title">定风波 · 莫听穿林打叶声</div>
+            <div class="poem-title">定風波 · 莫聽穿林打葉聲</div>
             <div class="poem-content">
-莫听穿林打叶声，何妨吟啸且徐行。
-竹杖芒鞋轻胜马，谁怕？
-<span class="highlight">一蓑烟雨任平生</span>。
+莫聽穿林打葉聲，何妨吟嘯且徐行。
+竹杖芒鞋輕勝馬，誰怕？
+<span class="highlight">一蓑煙雨任平生</span>。
 
-料峭春风吹酒醒，微冷，
-山头斜照却相迎。
-回首向来萧瑟处，归去，
-也无风雨也无晴。
+料峭春風吹酒醒，微冷，
+山頭斜照卻相迎。
+回首向來蕭瑟處，歸去，
+也無風雨也無晴。
             </div>
         </div>
 
         <footer>
-            “人生如逆旅，我亦是行人。”
+            「人生如逆旅，我亦是行人。」
         </footer>
     </div>
 
